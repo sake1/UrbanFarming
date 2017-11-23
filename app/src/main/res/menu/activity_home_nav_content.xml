@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/h_main_menu"
+            android:icon="@drawable/homelogo"
+            android:title="Menu Utama" />
+        <!--<item-->
+            <!--android:id="@+id/h_pick_up"-->
+            <!--android:icon="@drawable/kurir_logo"-->
+            <!--android:title="Pick-up Produk" />-->
+        <item
+            android:id="@+id/h_shop"
+            android:icon="@drawable/history_list_logo"
+            android:title="Toko Saya" />
+        <!--<item-->
+            <!--android:id="@+id/h_catalog"-->
+            <!--android:icon="@drawable/cataloglogo"-->
+            <!--android:title="Katalog" />-->
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/h_profile_setting"
+                android:icon="@drawable/profilelogo"
+                android:title="Profil Saya" />
+            <item
+                android:id="@+id/h_app_setting"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Pengaturan" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coopmart.urbanfarming.urbanfarming.Fragment.PickupFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Tidak ada jadwal pengambilan barang"
+        android:id="@+id/fp_no_list_label"
+        android:visibility="gone"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fp_pickup_list"
+        android:padding="20dp"
+        android:layout_weight="2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:text="REQUEST"
+        android:background="@color/primary_dark"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/fp_trigger_request"
+        android:layout_weight="0"/>
+
+</LinearLayout>
