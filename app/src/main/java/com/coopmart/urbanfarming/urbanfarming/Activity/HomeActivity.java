@@ -40,12 +40,12 @@ public class HomeActivity extends AppCompatActivity {
 
             if (id == R.id.h_main_menu) {
                 changeHomeActivityDisplayedFragment(new MainMenuFragment(), false);
-//            } else if (id == R.id.h_pick_up) {
-//                changeHomeActivityDisplayedFragment(new PickupFragment(), false);
+            } else if (id == R.id.h_pick_up) {
+                changeHomeActivityDisplayedFragment(new PickupFragment(), false);
             } else if (id == R.id.h_shop) {
                 changeHomeActivityDisplayedFragment(new HistoryFragment(), false);
-//            } else if (id == R.id.h_catalog) {
-//                changeHomeActivityDisplayedFragment(new CatalogFragment());
+            } else if (id == R.id.h_catalog) {
+                changeHomeActivityDisplayedFragment(new CatalogFragment(), false);
             } else if (id == R.id.h_profile_setting) {
                 Intent intent = new Intent(getApplication().getApplicationContext(), ProfileShowActivity.class);
                 startActivity(intent);
@@ -87,16 +87,17 @@ public class HomeActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavBarListener());
         /**/
 
-        if(this.getIntent() != null) {
-            if(this.getIntent().getIntExtra("flag", Navigator.ERROR_CODE) == Navigator.FROM_LOGIN_ACTIVITY) {
-                changeHomeActivityDisplayedFragment(new MainMenuFragment(), false);
-            } else if(this.getIntent().getIntExtra("flag", Navigator.ERROR_CODE) == Navigator.FROM_SETTING_ACTIVITY) {
-                Intent intent = new Intent(this, LoginActivity.class);
-                intent.putExtra("flag", Navigator.FROM_HOME_ACTIVITY);
-                startActivity(intent);
-                finish();
-            }
-        }
+        changeHomeActivityDisplayedFragment(new MainMenuFragment(), false);
+//        if(this.getIntent() != null) {
+//            if(this.getIntent().getIntExtra("flag", Navigator.ERROR_CODE) == Navigator.FROM_LOGIN_ACTIVITY) {
+//                changeHomeActivityDisplayedFragment(new MainMenuFragment(), false);
+//            } else if(this.getIntent().getIntExtra("flag", Navigator.ERROR_CODE) == Navigator.FROM_SETTING_ACTIVITY) {
+//                Intent intent = new Intent(this, LoginActivity.class);
+//                intent.putExtra("flag", Navigator.FROM_HOME_ACTIVITY);
+//                startActivity(intent);
+//                finish();
+//            }
+//        }
     }
 
     @Override
